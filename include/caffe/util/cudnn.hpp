@@ -134,6 +134,9 @@ inline void createPoolingDesc(cudnnPoolingDescriptor_t* pool_desc,
   case PoolingParameter_PoolMethod_AVE:
     *mode = CUDNN_POOLING_AVERAGE_COUNT_INCLUDE_PADDING;
     break;
+  case PoolingParameter_PoolMethod_SUM:
+     *mode = CUDNN_POOLING_AVERAGE_COUNT_INCLUDE_PADDING;
+     break;
   default:
     LOG(FATAL) << "Unknown pooling method.";
   }
